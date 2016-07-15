@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>responsive svg image </title>
+	<style type="text/css">
+
+body {	
+	font-size: 1em;
+	max-width: 400px;  /*i phone6*/
+}
+/*control position of svg thru container positoning- svg fills container*/
+.container {	
+	background: #CFD9F5;
+	/*width: 400px height collapsed then brought back in by padding-top in %;*/
+	height: 0;
+	width: 50%;  /*200px so svg fills*/
+	margin: 0 auto; /*for i phone*/
+	padding-top: 15rem; /*used to pop bckgrd up after collasped height*/
+	position: relative;
+	/*margin-top: 20px;
+	margin-left: 10px;*/
+}
+
+.clip-svg {
+	position: absolute;
+	top: 0;
+	left: 0; /*wont control further positioning*/ 
+
+ -webkit-clip-path: url(#myClip);
+ clip-path: url(#myClip);
+
+-webkit-transform: rotateY(0deg);
+ transform: rotateY(0deg);
+ -webkit-transition: all 2s ease;
+ transition: all 2s ease;
+}
+
+.clip-svg:hover {
+-webkit-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+ /*-webkit-transition: all 2s ease;
+ transition: all 2s ease;*/
+}
+
+img {
+	/*width: 200px;*/
+	width: 100%;
+	/*of container*/
+	/*centered the img in the div*/
+	margin-top: 20px;/*controls whole clip package positioning- but absolute and no following container resize*/
+
+}	
+
+.grey {
+	color: #666;
+	font-size: 1.5rem;
+	text-align: center;
+	font-family: ;
+}
+			
+</style>
+</head>
+<body>
+
+<div class="container"> 
+<!-- html img element- its outside of the svg tag- linked img to svg clippath w css  -->
+<img class="clip-svg" src="bwhtjuaneyes.png" alt="Carlos">
+
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+      <circle cx=".5" cy=".5" r=".5" />
+    </clipPath>
+  </defs>
+</svg>
+
+
+</div>
+
+<div class="alias">
+	<p class="grey">Juan Carlos</p>
+	<p class="grey">Juan Ton</p>
+	<p class="grey">Juan Snow</p>
+	<p class="grey">Juan Margheretti</p>
+</div>
+
+	
+</body>
+</html>
