@@ -8,16 +8,20 @@
 	<style type="text/css">
 /*i phone6*/
 body {	
+	width: 100vw;
+	max-width: 418px;
 	font-size: 1em;
-	width: 100vw;}  
+	font-family: 'Lato', sans-serif; 
+	margin: 0 auto;
+	padding: 0; }
 
 /*control position of svg thru container positoning- svg fills container*/
 .container {	
 	background: #CFD9F5;
 	/*width: 400px height collapsed then brought back in by padding-top in %;*/
 	height: 0;
-	width: 50%;  /*200px so svg fills*/
-	max-width: 416px; /* add nov15 */
+	/* width: ; */  /*200px so svg fills*/
+	max-width: 50%; /* 210px add nov15 */
 	margin: 0 auto; /*for i phone*/
 	padding-top: 15rem; /*used to pop bckgrd up after collasped height*/
 	position: relative; }
@@ -26,26 +30,29 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0; /*wont control further positioning*/ 
-
- -webkit-clip-path: url(#myClip);
- clip-path: url(#myClip);
-
--webkit-transform: rotateY(0deg);
- transform: rotateY(0deg);
- -webkit-transition: all 2s ease;
- transition: all 2s ease; }
+ 	-webkit-clip-path: url(#myClip);
+ 	clip-path: url(#myClip);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transition: all 2s ease;
+	transition: all 2s ease; }
 
 .clip-svg:hover {
 -webkit-transform: rotateY(180deg);
- transform: rotateY(180deg);
+ transform: rotateY(180deg); }
  /*-webkit-transition: all 2s ease;
- transition: all 2s ease;*/}
-
-img {
+ transition: all 2s ease;*/
+.container img { 
 	width: 100%;
+	max-width: 210px; }
+
+.handsome > img, 
+.found > img { 
+	width: 100vw;
+	max-width: 418px; }
+
 	/*of container*/
 	/*centered the img in the div*/
-	margin-top: 20px; }	
 /*controls whole clip package positioning- but absolute and no following container resize*/
 .grey {
 	color: #666;
@@ -61,7 +68,7 @@ img {
  	/* background-image: url(juanmakeup_03.jpg);
  	   background-repeat: no-repeat;
  	   background-attachment: fixed; */ 
- 	   margin-bottom: 80px; }
+ 	margin-bottom: 80px; }
 
 .found {  margin-left: 1.25em; }
 
@@ -75,16 +82,18 @@ img {
 	text-align: center;
 	margin-top: 2.5em;	
 	transition: all 1s linear; 
- transition-property: transform, background-color; }
+  transition-property: transform, background-color; }
 /* change bkgd color to make visible */
 .meet {
 	background-color: goldenrod;	
 	color: white;
+	margin-left: 0;
   transition-property: background-color; }
 
 .park {
 	background-color: hsla(225, 96%, 85%, .30);	
 	color: white;
+	margin-left: 0;
   transition-property: background-color; 
   transform: translate(50px, 110px); }  
 
