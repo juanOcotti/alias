@@ -49,7 +49,7 @@ body {
 .handsome > img, 
 .found > img { 
 	width: 100vw;
-	max-width: 418px; }
+	max-width: 420px; }
 
 	/*of container*/
 	/*centered the img in the div*/
@@ -64,18 +64,21 @@ body {
 .handsome, 
 .found {
 	margin: 0 auto;
-	width: 600px;
+	width: 100vw; /* wuz 600 */
+	max-width: 418px;
+	text-align: center;
  	/* background-image: url(juanmakeup_03.jpg);
  	   background-repeat: no-repeat;
  	   background-attachment: fixed; */ 
  	margin-bottom: 80px; }
 
-.found {  margin-left: 1.25em; }
-
+/* lrge mobil width */
 #loveJuan,
 #loveSuky {
-	width: 497px;
+	width: 100vw;
+	max-width: 418px;
 	height: 50px;
+	font-weight: 100; 
 	font-size: 1.6em;
 	line-height: 1.8;
 	color: white;
@@ -85,10 +88,11 @@ body {
   transition-property: transform, background-color; }
 /* change bkgd color to make visible */
 .meet {
-	background-color: goldenrod;	
+	/* background-color: goldenrod; */	
 	color: white;
 	margin-left: 0;
-  transition-property: background-color; }
+  transition-property: transform, background-color;
+  transform: translate(30px, 225px); }
 
 .park {
 	background-color: hsla(225, 96%, 85%, .30);	
@@ -97,7 +101,10 @@ body {
   transition-property: background-color; 
   transform: translate(50px, 110px); }  
 
-
+span {
+	color:#fff;
+	font-weight: 100;
+	font-size: 1.8; }
 			
 </style>
 </head>
@@ -122,17 +129,20 @@ body {
 	<p class="grey">Juan Ton</p>
 	<p class="grey">Juan Snow</p>
 	<p class="grey">Juan Margheretti</p>
-	<p class="grey">Juan Margheretti</p>	
+	<p class="grey">juanOcotti</p>
+	
 </div>
 
 <div class="handsome">
 	<div id="loveJuan">meet juan carlos</div>
-	<img src="juanmakeup_03.jpg" alt="juan" id="portrait"/> 
+	<img src="juanmakeup_03.jpg" alt="juan" id="portrait"/>
+	<span>Hover</span> 
 </div>
 
 <div class="found">
 	<div id="loveSuky">lost is found</div>
-	<img src="suky_600px.jpg" alt="suky" id="lost"/> 
+	<img src="suky_600px.jpg" alt="suky" id="lost"/>
+	<span>Hover</span>  
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
